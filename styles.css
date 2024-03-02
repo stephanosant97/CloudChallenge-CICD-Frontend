@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+#body2 {
+	font-family: Inter, sans-serif;
+	background-color: #5A5A5A;
+}
+
+.intro {
+    padding-bottom: 11rem;
+}
+
+img {
+    margin-top: 5rem;
+    border-radius: 20px;
+}
+
+.name {
+    margin-top: 1rem;
+}
+
+.firstname {
+	color: white;
+	font-weight: 200;
+	font-size: clamp(2rem, 8vw, 4rem);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+	font-family: Inter, sans-serif;
+}
+
+.lastname {
+	color: #ff7613;
+	font-weight: 700;
+	font-size: clamp(2.5rem, 15vw, 7rem);
+	text-transform: uppercase;
+	display: block;
+	font-family: Inter, sans-serif;
+}
+
+.jobtitle {
+    color: white;
+	font-weight: 100;
+	font-size: clamp(2rem, 2vw, 2rem);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+	font-family: Inter, sans-serif;
+}
+
+.second {
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-bottom: 10rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+	#testing {
+		margin-left: 20rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	#certz {
+		margin-left: 5rem;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	#experience {
+		width: 50rem;
+		padding-left: 7rem;
+	}
+}
+
+#cloud {
+	max-width: 55px;
+	max-height: 55px;
+	float: left;
+}
+
+.jobs {
+	margin-bottom: 1rem;
+}
+
+.school {
+	margin-top: 2rem;
+}
+
+#education2 {
+	background-color: gray;
+}
+
+.accordion-button:not(.collapsed) {
+	background-color: transparent !important;
+	color: inherit;
+	box-shadow: none;
+    outline: none;
+	
+  }
+
+.accordion-button:focus {
+    box-shadow: none !important; 
+    border-color: black !important;
+}
+
+.cardtitles {
+	color: #ff7613;
+
+}
+
+hr {
+	background-color: whitesmoke;
+	height: 2px;
+	border: none;
+}
+
+.bottomhr {
+	margin-top: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+.visitor {
+	font-weight: 200;
+	font-size: clamp(2rem, 8vw, 3rem);
+	text-transform: uppercase;
+	display: block;
+	margin-bottom: -0.8rem;
+	padding-right: 10rem;
+	color: black;
+}
+
+.count {
+	font-weight: 70;
+	font-size: clamp(2.0rem, 7vw, 3.5rem);
+	text-transform: uppercase;
+	display: block;
+	padding-left: 3rem;
+	color: black;
+}
+
+#result {
+	font-weight: 70;
+	font-size: clamp(2.0rem, 7vw, 3.5rem);
+	text-transform: uppercase;
+	display: block;
+	padding-left: 3rem;
+	color: black;
+}
