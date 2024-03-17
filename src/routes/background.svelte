@@ -4,5 +4,5 @@
 
 
 <div class="w-screen h-screen">
-  <Video src="/animation.mp4" autoPlay playsInLine muted loop class="object-cover w-full h-full" />
+  <Video src="/animation.mp4" autoplay playsinline muted loop class="object-cover w-full h-full" trackSrc="animation.mp4" />
 </div>
