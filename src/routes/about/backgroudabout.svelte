@@ -3,7 +3,7 @@
 </script>
 
 <div class="relative overflow-hidden w-screen h-screen">
-	<Video src="/animation.mp4" autoplay muted loop class="object-cover w-full h-full" trackSrc="animation.mp4" />
+	<Video src="/animation.mp4" autoPlay playsInLine muted loop class="object-cover w-full h-full" />
 
 	<div class="headingdivone absolute inset-20 z-20 border border-white border-2 p-5 bg-gray-600">
 		<h1 class="heading text-xl font-bold italic">
@@ -84,5 +84,4 @@
 	.linkedinicon {
 		padding-left: 20px;
 	}
-
 </style>
