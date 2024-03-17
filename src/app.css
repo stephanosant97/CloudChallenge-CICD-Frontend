@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+span{
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+/* Adjusted the top position for mobile devices */
+@media (max-width: 640px) {
+    /* Adjusted the position of the certifications card */
+    .certs {
+        top: 0px;
+        left: 20px;
+        /* Adjusted the width to span the full width with padding */
+        width: calc(100% - 20px);
+    }
+}
+
+@media (max-width: 640px) {
+    .expheader {
+        /* Adjust top margin to move the timeline down */
+        margin-top: 91px;
+    }
+}
+ 
+
+@media (max-width: 768px) {
+    .certs {
+        left: 0px;
+        padding-left: 15px;
+    }
+}
+
+.headingdiv {
+    left: 50%; /* Center the box horizontally */
+    transform: translateX(-50%); /* Adjust for the box width */
+    /* Remove right positioning */
+    right: auto;
+}
+
+
+.headingdiv {
+    left: 15%; /* Adjust as needed */
+    right: 20%; /* Adjust as needed */
+    /* Other styles remain the same */
+    transform: none; /* Remove the transform property */
+}
+
+.headingdivone::-webkit-scrollbar {
+    width: 13px; /* Width of the scrollbar */
+}
+
+.headingdivone::-webkit-scrollbar-track {
+    background: #f87e0d; /* Background color of the track */
+}
+
+.headingdivone::-webkit-scrollbar-thumb {
+    background-color: black; /* Color of the scrollbar thumb */
+    border-radius: 2px; /* Rounded corners */
+}
+
+.headingdivone::-webkit-scrollbar-thumb:hover {
+    background-color: #333; /* Color of the scrollbar thumb on hover */
+}
