@@ -3,10 +3,29 @@
 	import Visitorcounter from './visitorcounter.svelte';
 	import { Timeline, TimelineItem } from 'flowbite-svelte';
 	import Certifications from './certifications.svelte';
+	import { onMount } from 'svelte';
+
+	let video;
+
+	onMount(() => {
+	video = document.querySelector('.video-element');
+	video.addEventListener('canplaythrough', () => {
+		video.muted = true;
+		video.play();
+	});
+	});
 </script>
 
 <div class="relative overflow-hidden w-screen h-screen">
-	<Video src="/animation.mp4" autoplay playsinline muted loop class="object-cover w-full h-full" trackSrc="animation.mp4" />
+	<Video
+    src="/animation.mp4"
+    autoplay
+    playsinline
+    muted
+    loop
+    class="video-element object-cover w-full h-full"
+    trackSrc="animation.mp4"
+  />
 	<div class="flex justify-end">
 		<div
 			class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform flex-border"

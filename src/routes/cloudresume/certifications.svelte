@@ -71,7 +71,7 @@
 					</li>
 					<li class="list-group-item bg-gray-600">
 						<i class="fa-solid fa-network-wired fa-lg" style="color: #f87e0d;"></i>
-						Network Administration
+						Network Admin
 					</li>
 					<li class="list-group-item bg-gray-600">
 						<i class="fa-solid fa-users-gear fa-lg" style="color: #f87e0d;"></i>
