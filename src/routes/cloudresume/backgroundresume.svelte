@@ -187,31 +187,49 @@
 </div>
 
 <style>
-	.headingdiv {
-		max-width: 100%;
-		overflow: auto;
-	}
+    .headingdiv {
+        max-width: 100%;
+        overflow: auto;
+    }
 
-	.heading {
-		padding-left: 15px;
-		padding-top: 50px;
-		color: white;
-	}
+    .heading {
+        padding-left: 15px;
+        padding-top: 50px;
+        color: white;
+    }
 
-	.headingdiv::-webkit-scrollbar {
-		width: 13px; /* Width of the scrollbar */
-	}
+    .headingdiv::-webkit-scrollbar {
+        width: 13px;
+    }
 
-	.headingdiv::-webkit-scrollbar-track {
-		background: #f87e0d; /* Background color of the track */
-	}
+    .headingdiv::-webkit-scrollbar-track {
+        background: #f87e0d;
+    }
 
-	.headingdiv::-webkit-scrollbar-thumb {
-		background-color: black; /* Color of the scrollbar thumb */
-		border-radius: 2px; /* Rounded corners */
-	}
+    .headingdiv::-webkit-scrollbar-thumb {
+        background-color: black;
+        border-radius: 2px;
+    }
 
-	.headingdiv::-webkit-scrollbar-thumb:hover {
-		background-color: #333; /* Color of the scrollbar thumb on hover */
-	}
+    .headingdiv::-webkit-scrollbar-thumb:hover {
+        background-color: #333;
+    }
+
+    @media only screen and (max-width: 767px) {
+        /* Styles for mobile devices */
+        .headingdiv {
+            width: 100%; /* Make it take up full width on mobile */
+            max-width: 100%;
+            height: 89%; /* Adjust height as needed */
+            padding: 5px; /* Add padding as needed */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .heading {
+            margin-right: 10px;
+        }
+    }
 </style>

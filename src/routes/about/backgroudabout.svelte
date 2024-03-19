@@ -24,7 +24,7 @@
 		trackSrc="animation.mp4"
 	/>
 
-	<div class="headingdivone absolute inset-20 z-20 border border-white border-2 p-5 bg-gray-600">
+	<div class="headingdivone absolute inset-0 z-20 border border-white border-2 p-5 bg-gray-600">
 		<h1 class="heading text-xl font-bold italic">
 			About
 			<hr class="abouthr" />
@@ -61,7 +61,13 @@
 
 <style>
 	.headingdivone {
-		max-width: 90%; /* Adjust the value as needed */
+		position: fixed;
+		top: 50%; /* Center vertically */
+		left: 50%; /* Center horizontally */
+		transform: translate(-50%, -50%); /* Move back by half of its width and height */
+		width: 90%; /* Adjust the width as needed */
+		max-width: 90%; /* Adjust the maximum width as needed */
+		height: 82vh;
 		overflow: auto; /* Enable overflow scrolling if needed */
 	}
 
@@ -78,6 +84,13 @@
 
 	@media only screen and (max-width: 767px) {
 		/* Styles for mobile devices */
+		.headingdivone {
+			width: 100%; /* Make it take up full width on mobile */
+			max-width: 100%; /* Adjust the maximum width as needed */
+			height: 89%;
+			padding: 20px; /* Add padding as needed */
+		}
+
 		.heading {
 			margin-right: 10px;
 		}

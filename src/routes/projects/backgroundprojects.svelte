@@ -48,8 +48,8 @@
 
 <style>
     .headingdivone {
-        max-width: 100%; /* Adjust the value as needed */
-        overflow: auto; /* Enable overflow scrolling if needed */
+        max-width: 100%;
+        overflow: auto;
     }
 
     .heading {
@@ -63,19 +63,44 @@
         margin-right: 0px;
     }
 
-    /* Desktop padding */
     .cardelement {
         padding-top: 20px;
         padding-left: 50px;
         padding-right: 50px;
     }
 
-    /* Mobile padding */
     @media only screen and (max-width: 767px) {
         .cardelement {
             padding-top: 10px;
             padding-left: 20px;
             padding-right: 20px;
+        }
+
+        .headingdivone {
+            width: 100%;
+            max-width: 100%;
+            height: 89%;
+            padding: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .heading {
+            margin-right: 10px;
+        }
+    }
+
+    /* Additional styles for desktop */
+    @media only screen and (min-width: 768px) {
+        .headingdivone {
+            width: 80%; /* Adjust width as needed */
+            max-width: 100%;
+            height: auto; /* Allow height to adjust based on content */
+            padding: 20px;
+            left: calc(40% + 120px); /* Adjust the value as needed */
+            transform: translateX(-50%);
         }
     }
 </style>
