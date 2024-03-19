@@ -60,60 +60,61 @@
 </div>
 
 <style>
-	.headingdivone {
-		position: fixed;
-		top: 50%; /* Center vertically */
-		left: 50%; /* Center horizontally */
-		transform: translate(-50%, -50%); /* Move back by half of its width and height */
-		width: 90%; /* Adjust the width as needed */
-		max-width: 90%; /* Adjust the maximum width as needed */
-		height: 82vh;
-		overflow: auto; /* Enable overflow scrolling if needed */
-	}
+    .headingdivone {
+        position: fixed;
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Move back by half of its width and height */
+        width: 90%; /* Adjust the width as needed */
+        max-width: 90%; /* Adjust the maximum width as needed */
+        height: 82vh; /* Default height for desktop */
+        overflow: auto; /* Enable overflow scrolling if needed */
+    }
 
-	.heading {
-		padding-left: 40px;
-		padding-top: 50px;
-		color: white;
-	}
+    .heading {
+        padding-left: 40px;
+        padding-top: 50px;
+        color: white;
+    }
 
-	.abouthr {
-		margin-left: 0px;
-		margin-right: 0px;
-	}
+    .abouthr {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 
-	@media only screen and (max-width: 767px) {
-		/* Styles for mobile devices */
-		.headingdivone {
-			width: 100%; /* Make it take up full width on mobile */
-			max-width: 100%; /* Adjust the maximum width as needed */
-			height: 89%;
-			padding: 20px; /* Add padding as needed */
-		}
+    @media only screen and (max-width: 767px) {
+        /* Styles for mobile devices */
+        .headingdivone {
+            width: 100%; /* Make it take up full width on mobile */
+            max-width: 100%; /* Adjust the maximum width as needed */
+            height: 100%; /* Adjust the bottom length on mobile */
+            margin-top: 50px;
+			padding-top: 0px; /* Add padding as needed */
+        }
 
-		.heading {
-			margin-right: 10px;
-		}
-	}
+        .heading {
+            margin-right: 10px;
+        }
+    }
 
-	.aboutpara {
-		padding-left: 40px;
-		padding-top: 35px;
-		color: white;
-	}
+    .aboutpara {
+        padding-left: 40px;
+        padding-top: 35px;
+        color: white;
+    }
 
-	.aboutpara2 {
-		padding-left: 40px;
-		padding-top: 70px;
-		color: white;
-	}
+    .aboutpara2 {
+        padding-left: 40px;
+        padding-top: 70px;
+        color: white;
+    }
 
-	.githubicon {
-		padding-top: 30px;
-		padding-left: 10px;
-	}
+    .githubicon {
+        padding-top: 30px;
+        padding-left: 10px;
+    }
 
-	.linkedinicon {
-		padding-left: 20px;
-	}
+    .linkedinicon {
+        padding-left: 20px;
+    }
 </style>

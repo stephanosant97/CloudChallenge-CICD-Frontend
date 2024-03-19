@@ -1,14 +1,9 @@
 <script>
     import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, ImagePlaceholder, Skeleton, TextPlaceholder } from 'flowbite-svelte';
-  
   </script>
   
-  
-  
-  
-
   <div class="relative px-8">
-    <Navbar color="form" class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 bg-transparent flex justify-between items-center" style="border-bottom-width: 2px; border-bottom-color: #ccc;">
+    <Navbar color="form" class="mobilenav px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 bg-transparent flex justify-between items-center" style="border-bottom-width: 2px; border-bottom-color: #ccc;">
         <NavBrand>
             <img src="/me.png" href="/" class="me-3 h-6 sm:h-9" alt="me emoji" />
             <span class="self-center whitespace-nowrap text-xl text-orange-400 font-bold"></span>

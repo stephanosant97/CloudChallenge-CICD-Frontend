@@ -79,8 +79,9 @@
         .headingdivone {
             width: 100%;
             max-width: 100%;
-            height: 89%;
-            padding: 20px;
+            height: 100%;
+            padding: 10px;
+            margin-top: 50px;
             position: absolute;
             top: 50%;
             left: 50%;
