@@ -222,7 +222,7 @@
             width: 100%; /* Make it take up full width on mobile */
             max-width: 100%;
             height: 100%; /* Adjust height as needed */
-            padding: 8px; /* Add padding as needed */
+            padding: 1px; /* Add padding as needed */
             position: absolute;
             top: 50%;
             left: 50%;
@@ -234,7 +234,7 @@
         }
 
 		.expheader{
-			margin-top: 5px;
+			margin-top: 20px;
 		}
     }
 </style>
