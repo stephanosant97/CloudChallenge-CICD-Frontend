@@ -26,8 +26,7 @@
     class="video-element object-cover w-full h-full"
     trackSrc="animation.mp4"
   />
- <div>
-    <div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform">
+    <div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600">
         <h1 class="heading text-xl font-bold italic">Projects
             <hr class="abouthr">  
         </h1>
@@ -45,7 +44,6 @@
             </a>
         </div>
     </div>   
-</div>
 </div> 
 
 <style>
@@ -75,8 +73,7 @@
 
         .headingdiv {
             width: 100%; /* Make it take up full width on mobile */
-            max-width: 100%;
-            height: 90%; /* Adjust height as needed */
+            height: 100%; /* Adjust height as needed */
             padding: 25px; /* Add padding as needed */
             top: 50%;
             left: 50%;
@@ -84,15 +81,4 @@
         }
     }
 
-    /* Additional styles for desktop */
-    @media only screen and (min-width: 768px) {
-        .headingdiv {
-            width: 80%; /* Adjust width as needed */
-            max-width: 100%;
-            height: auto; /* Allow height to adjust based on content */
-            padding: 20px;
-            left: calc(40% + 120px); /* Adjust the value as needed */
-            transform: translateX(-50%);
-        }
-    }
 </style>
