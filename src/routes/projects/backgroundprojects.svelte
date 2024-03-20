@@ -72,11 +72,6 @@
     }
 
     @media only screen and (max-width: 767px) {
-        .cardelement {
-            padding-top: 10px;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
 
         .headingdiv {
             width: 100%; /* Make it take up full width on mobile */
