@@ -26,7 +26,7 @@
     class="video-element object-cover w-full h-full"
     trackSrc="animation.mp4"
   />
-    <div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600">
+    <div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform">
         <h1 class="heading text-xl font-bold italic">Projects
             <hr class="abouthr">  
         </h1>
