@@ -56,6 +56,7 @@
 				<i class="linkedinicon fab fa-linkedin-in fa-2xl"></i>
 			</a>
 		</h1>
+		<h1 class="text-gray-600" style="padding-top: 50px;">testestset</h1>
 	</div>
 </div>
 </div>
