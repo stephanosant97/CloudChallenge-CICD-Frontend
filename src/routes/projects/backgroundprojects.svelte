@@ -77,8 +77,7 @@
             width: 100%; /* Make it take up full width on mobile */
             max-width: 100%;
             height: 90%; /* Adjust height as needed */
-            padding: 10px; /* Add padding as needed */
-            position: absolute;
+            padding: 25px; /* Add padding as needed */
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
