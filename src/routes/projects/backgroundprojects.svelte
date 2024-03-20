@@ -32,17 +32,6 @@
             <hr class="abouthr">  
         </h1>
         <div class="cardelement space-y-4 w-full">
-            <!-- Use an <a> tag for navigation -->
-            <a href="/cloudresume" class="pointer-events-none">
-                <Card img="/cloudchallenge.png" size="xs" reverse={hCard} class="bg-black p-4 hover:bg-black pointer-events-auto">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white italic">Cloud Resume Challenge</h5>
-                    <p class="mb-3 font-normal text-gray-300 leading-tight italic">The challenge revolves around constructing a static website on the cloud platform of choice to host a resume and incorporating a visitor counter.</p>
-                    <Kbd class="px-2 py-1.5">Python</Kbd>
-                    <Kbd class="px-2 py-1.5">Js</Kbd>
-                    <Kbd class="px-2 py-1.5">HTML</Kbd>
-                    <Kbd class="px-2 py-1.5">CSS</Kbd>
-                </Card>
-            </a>
         </div>
     </div>   
  </div>
