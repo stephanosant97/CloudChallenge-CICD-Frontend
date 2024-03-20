@@ -23,8 +23,8 @@
 		class="video-element object-cover w-full h-full"
 		trackSrc="animation.mp4"
 	/>
-
-	<div class="headingdivone absolute inset-0 z-20 border border-white border-2 p-5 bg-gray-600">
+	<div class= "flex justify-end">
+	<div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform flex-border">
 		<h1 class="heading text-xl font-bold italic">
 			About
 			<hr class="abouthr" />
@@ -58,9 +58,10 @@
 		</h1>
 	</div>
 </div>
+</div>
 
 <style>
-    .headingdivone {
+    .headingdiv {
         position: fixed;
         top: 50%; /* Center vertically */
         left: 50%; /* Center horizontally */
@@ -84,12 +85,15 @@
 
     @media only screen and (max-width: 767px) {
         /* Styles for mobile devices */
-        .headingdivone {
+		.headingdiv {
             width: 100%; /* Make it take up full width on mobile */
-            max-width: 100%; /* Adjust the maximum width as needed */
-            height: 100%; /* Adjust the bottom length on mobile */
-            margin-top: 50px;
-			padding-top: 0px; /* Add padding as needed */
+            max-width: 100%;
+            height: 100%; /* Adjust height as needed */
+            padding: 8px; /* Add padding as needed */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .heading {
@@ -105,12 +109,12 @@
 
     .aboutpara2 {
         padding-left: 40px;
-        padding-top: 70px;
+        padding-top: 30px;
         color: white;
     }
 
     .githubicon {
-        padding-top: 30px;
+        padding-top: 25px;
         padding-left: 10px;
     }
 

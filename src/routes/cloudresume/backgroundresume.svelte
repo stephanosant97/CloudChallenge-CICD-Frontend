@@ -179,7 +179,7 @@
 							<p class="mb-4 text-base font-normal text-gray-600">.</p>
 						</TimelineItem>
 					</Timeline>
-					<Certifications />
+					<Certifications class="certsmarg" />
 				</div>
 			</h1>
 		</div>
