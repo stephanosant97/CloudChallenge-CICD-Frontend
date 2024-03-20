@@ -26,7 +26,7 @@
     class="video-element object-cover w-full h-full"
     trackSrc="animation.mp4"
   />
-    <div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform">
+    <div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform flex-border justify-end">
         <h1 class="heading text-xl font-bold italic">Projects
             <hr class="abouthr">  
         </h1>
@@ -73,8 +73,10 @@
 
         .headingdiv {
             width: 100%; /* Make it take up full width on mobile */
+            max-width: 100%;
             height: 100%; /* Adjust height as needed */
-            padding: 25px; /* Add padding as needed */
+            padding: 8px; /* Add padding as needed */
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);

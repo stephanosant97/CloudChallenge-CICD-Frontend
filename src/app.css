@@ -47,21 +47,6 @@ span{
     }
 }
 
-.headingdiv {
-    left: 50%; /* Center the box horizontally */
-    transform: translateX(-50%); /* Adjust for the box width */
-    /* Remove right positioning */
-    right: auto;
-}
-
-
-.headingdiv {
-    left: 15%; /* Adjust as needed */
-    right: 20%; /* Adjust as needed */
-    /* Other styles remain the same */
-    transform: none; /* Remove the transform property */
-}
-
 .headingdiv::-webkit-scrollbar {
     width: 13px; /* Width of the scrollbar */
 }
@@ -88,4 +73,22 @@ span{
 
   body {
     overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .headingdiv {
+        left: 50%; /* Center the box horizontally */
+        transform: translateX(-50%); /* Adjust for the box width */
+        /* Remove right positioning */
+        right: auto;
+    }
+    
+    
+    .headingdiv {
+        left: 15%; /* Adjust as needed */
+        right: 20%; /* Adjust as needed */
+        /* Other styles remain the same */
+        transform: none; /* Remove the transform property */
+    }
+    
 }
