@@ -1,6 +1,7 @@
 # AWS Cloud Resume Project
 
 Resume: https://www.stephanosant.com/cloudresume
+Backend Repository: https://github.com/stephanosant97/CloudChallenge-Terraform-Backend
 
 ![Screenshot 2024-03-04 101845](https://github.com/stephanosant97/CloudChallenge-CICD-Frontend/assets/135358869/6f139bdc-a44a-4975-bd87-bf3967b672a8)
 
