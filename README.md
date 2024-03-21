@@ -1,6 +1,6 @@
 # AWS Cloud Resume Project
 
-Website: https://www.stephanosant.com
+Resume: https://www.stephanosant.com/cloudresume
 
 ![Screenshot 2024-03-04 101845](https://github.com/stephanosant97/CloudChallenge-CICD-Frontend/assets/135358869/6f139bdc-a44a-4975-bd87-bf3967b672a8)
 
@@ -31,5 +31,8 @@ Programming Languages: Python (Boto3), HTML, CSS, JavaScript
 ## Future Plans
 
 Stay tuned for my upcoming blog post where I'll delve deeper into my Cloud Resume Challenge journey and share additional insights!
+EDIT 3/21/2024 Blog Link : https://www.linkedin.com/pulse/my-experience-converting-cloud-resume-challenge-iac-using-santos-jgdye/
 
 For official instructions and guidelines for the Cloud Resume Challenge, visit the Cloud Resume Challenge Official Website.
+
+EDIT: As of 3/20/2024 I have redesigned my website on Sveltekit.
