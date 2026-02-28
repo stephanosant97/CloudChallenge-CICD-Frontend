@@ -32,9 +32,22 @@ Programming Languages: Python (Boto3), HTML, CSS, JavaScript
 
 ## Future Plans
 
-Stay tuned for my upcoming blog post where I'll delve deeper into my Cloud Resume Challenge journey and share additional insights!
-EDIT 3/21/2024 Blog Link : https://www.linkedin.com/pulse/my-experience-converting-cloud-resume-challenge-iac-using-santos-jgdye/
+Blog post on the Cloud Resume Challenge journey:
+https://www.linkedin.com/pulse/my-experience-converting-cloud-resume-challenge-iac-using-santos-jgdye/
 
-For official instructions and guidelines for the Cloud Resume Challenge, visit the Cloud Resume Challenge Official Website.
+For official instructions and guidelines, visit the Cloud Resume Challenge Official Website.
 
-EDIT: As of 3/20/2024 I have redesigned my website on Sveltekit.
+---
+
+## Redesign — February 2026
+
+Fully redesigned the frontend with a custom "Aurora Dark" theme:
+
+- Replaced static HTML/CSS with a SvelteKit component architecture
+- Replaced video background with animated CSS gradient blobs (orange, purple, blue) on a dark background
+- Consolidated navigation into a shared layout with a responsive mobile hamburger menu
+- Redesigned all pages (Home, About, Projects, Cloud Resume) with consistent typography, fade-in animations, and glassmorphism-inspired styling
+- Added full resume content: experience, certifications, skills, and education
+- Updated CI/CD pipeline (GitHub Actions) to include Node.js install and SvelteKit build step before S3 sync
+
+**Stack update:** SvelteKit + Tailwind CSS + Flowbite Svelte
