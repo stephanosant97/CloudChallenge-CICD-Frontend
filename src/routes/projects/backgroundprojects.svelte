@@ -1,84 +1,187 @@
 <script>
-    import { Video } from 'flowbite-svelte';
-    import { Kbd } from 'flowbite-svelte';
-    import { Card, Button, Toggle } from 'flowbite-svelte';
     import { onMount } from 'svelte';
-
-    let video;
-
-    onMount(() => {
-        video = document.querySelector('.video-element');
-        video.addEventListener('canplaythrough', () => {
-            video.muted = true;
-            video.play();
-        });
-    });
-
-    let hCard = false;
+    let visible = false;
+    onMount(() => setTimeout(() => (visible = true), 100));
 </script>
 
-<div class="relative overflow-hidden w-screen h-screen">
-    <Video
-        src="/animation.mp4"
-        autoplay
-        playsinline
-        muted
-        loop
-        class="video-element object-cover w-full h-full hidden md:block"
-        trackSrc="animation.mp4"
-    />
-    <div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform flex-border justify-end">
-        <h1 class="heading text-xl font-bold italic">Projects
-            <hr class="abouthr">  
-        </h1>
-        <div class="cardelement space-y-4 w-full">
-            <a href="/cloudresume" class="pointer-events-none">
-                <Card img="/cloudchallenge.png" size="xs" reverse={hCard} class="bg-black p-4 hover:bg-black pointer-events-auto">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-white italic">Cloud Resume Challenge</h5>
-                    <p class="mb-3 font-normal text-gray-300 leading-tight italic">The challenge revolves around constructing a static website on the cloud platform of choice to host a resume and incorporating a visitor counter.</p>
-                    <Kbd class="px-2 py-1.5">Python</Kbd>
-                    <Kbd class="px-2 py-1.5">Js</Kbd>
-                    <Kbd class="px-2 py-1.5">HTML</Kbd>
-                    <Kbd class="px-2 py-1.5">CSS</Kbd>
-                </Card>
+<main class="page" class:visible>
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 pt-32 pb-16">
+
+        <div class="page-label">02 / Projects</div>
+        <h1 class="page-heading">Projects.</h1>
+
+        <div class="projects-grid">
+            <a href="/cloudresume" class="project-card">
+                <div class="card-image">
+                    <img src="/cloudchallenge.png" alt="Cloud Resume Challenge" />
+                </div>
+                <div class="card-body">
+                    <div class="card-number">001</div>
+                    <h2 class="card-title">Cloud Resume Challenge</h2>
+                    <p class="card-desc">
+                        A static website hosted on the cloud to display a resume,
+                        complete with a serverless visitor counter backed by AWS Lambda,
+                        DynamoDB, and API Gateway.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                    <div class="card-cta">
+                        View Project <span class="arrow">→</span>
+                    </div>
+                </div>
             </a>
         </div>
-    </div>   
- </div>
+    </div>
+</main>
 
 <style>
-    .headingdiv {
-        max-width: 100%;
-        overflow: auto;
+    .page {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
-    .heading {
-        padding-left: 40px;
-        padding-top: 50px;
+    .page.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .page-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #f97316;
+        margin-bottom: 1rem;
+    }
+
+    .page-heading {
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
         color: white;
+        margin-bottom: 3.5rem;
     }
 
-    .abouthr {
-        margin-left: 0px;
-        margin-right: 0px;
+    .projects-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .cardelement {
-        padding-top: 20px;
-        padding-left: 50px;
-        padding-right: 50px;
-    }
-
-    @media only screen and (max-width: 767px) {
-        .headingdiv {
-            width: 100%; /* Make it take up full width on mobile */
-            max-width: 100%;
-            height: 100%; /* Adjust height as needed */
-            padding: 8px; /* Add padding as needed */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+    @media (min-width: 768px) {
+        .projects-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.03);
+        overflow: hidden;
+        transition: border-color 0.3s, background 0.3s, transform 0.3s;
+        cursor: pointer;
+    }
+
+    .project-card:hover {
+        border-color: rgba(249, 115, 22, 0.3);
+        background: rgba(249, 115, 22, 0.04);
+        transform: translateY(-4px);
+    }
+
+    .card-image {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        background: rgba(255,255,255,0.03);
+    }
+
+    .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.8;
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .project-card:hover .card-image img {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+
+    .card-body {
+        padding: 1.75rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex: 1;
+    }
+
+    .card-number {
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        color: #f97316;
+    }
+
+    .card-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: white;
+        line-height: 1.2;
+    }
+
+    .card-desc {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.75;
+        font-weight: 300;
+        flex: 1;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.25rem;
+    }
+
+    .tag {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 9999px;
+        padding: 0.2rem 0.65rem;
+    }
+
+    .card-cta {
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: #f97316;
+        margin-top: 0.5rem;
+        transition: gap 0.2s;
+    }
+
+    .arrow {
+        display: inline-block;
+        transition: transform 0.2s;
+    }
+
+    .project-card:hover .arrow {
+        transform: translateX(4px);
     }
 </style>

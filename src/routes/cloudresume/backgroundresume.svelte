@@ -1,240 +1,417 @@
 <script>
-	import { Video } from 'flowbite-svelte';
-	import Visitorcounter from './visitorcounter.svelte';
-	import { Timeline, TimelineItem } from 'flowbite-svelte';
-	import Certifications from './certifications.svelte';
-	import { onMount } from 'svelte';
-
-	let video;
-
-	onMount(() => {
-	video = document.querySelector('.video-element');
-	video.addEventListener('canplaythrough', () => {
-		video.muted = true;
-		video.play();
-	});
-	});
+    import { onMount } from 'svelte';
+    import Visitorcounter from './visitorcounter.svelte';
+    let visible = false;
+    onMount(() => setTimeout(() => (visible = true), 100));
 </script>
 
-<div class="relative overflow-hidden w-screen h-screen">
-	<Video
-    src="/animation.mp4"
-    autoplay
-    playsinline
-    muted
-    loop
-    class="video-element object-cover w-full h-full"
-    trackSrc="animation.mp4"
-  />
-	<div class="flex justify-end">
-		<div
-			class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform flex-border"
-		>
-			<h1 class="heading text-xl font-bold italic">
-				Cloud Resume <span class="block sm:inline-block float-right">
-					Visitor Counter : <Visitorcounter />
-				</span>
-				<hr class="abouthr" />
-				<h1
-					class="expheader underline underline-offset-2 italic"
-					style="padding-bottom: 5px; padding-top: 15px"
-				>
-					Experience
-				</h1>
-				<div class="relative pt-7 pl-4">
-					<Timeline order="vertical" class="experience">
-						<TimelineItem
-							class="titleitems"
-							title="IT Support Specialist"
-							date="Fontainebleau Development, Oct 2023 - Current"
-						>
-							<svelte:fragment slot="icon">
-								<span
-									class="flex absolute -start-3 justify-center items-center w-6 h-6 bg-primary-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										height="32"
-										width="32"
-										viewBox="0 0 512 512"
-										><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-											fill="#f87e0d"
-											d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"
-										/></svg
-									>
-								</span>
-							</svelte:fragment>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Supports and maintains in-house audio-visual equipment, desktops and notebooks <br
-								/>
-								(both Windows and MacOS), specialty systems, and peripherals.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Performs diagnostics and repairs to ensure all hardware and
-								<br /> equipment are performing optimally.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Provides support to end users in troubleshooting problems in a fast-paced and
-								constantly evolving environment.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Supports basic helpdesk needs for multiple sites remotely and on-premises.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Provides server administration as well as Office 365 administration.
-							</p>
-						</TimelineItem>
-						<TimelineItem title="Junior Network Engineer" date="Ballyhoo Media, 02/2023 - 10/2023">
-							<svelte:fragment slot="icon">
-								<span
-									class="flex absolute -start-3 justify-center items-center w-6 h-6 bg-primary-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										height="32"
-										width="32"
-										viewBox="0 0 512 512"
-										><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-											fill="#f87e0d"
-											d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"
-										/></svg
-									>
-								</span>
-							</svelte:fragment>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Lead the creation, setup and configuration of digital signage networks to maximize
-								overall effectiveness.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Orchestrate the configuration and facilitation of Cradlepoints routers,<br /> ensuring
-								reliable and secure network connections.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Responsible for the setup and management of Brightsign digital signage players,<br
-								/>
-								optimizing content playback and user experience.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Responsible for wrapping all creatives in a JavaScript Program that allows for
-								automated play count<br /> tracking across all assets into an AWS DynamoDB database.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Led the setup of remote troubleshooting network based off RaspberryPi computers on
-								all assets,<br /> leading to reduced field time, better customer experience and lower
-								ticket counts.
-							</p>
-						</TimelineItem>
-						<TimelineItem title="Operations Supervisor" date="Amazon, 11/20 - 02/2023">
-							<svelte:fragment slot="icon">
-								<span
-									class="flex absolute -start-3 justify-center items-center w-6 h-6 bg-primary-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										height="32"
-										width="32"
-										viewBox="0 0 512 512"
-										><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-											fill="#f87e0d"
-											d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"
-										/></svg
-									>
-								</span>
-							</svelte:fragment>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Applied the cutting-edge Dynamic Stow system and led the successful introduction of
-								the<br /> new DA assist program at DVB7, resulting in improved efficiency.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Headed the training and mentoring of newly recruited personnel, encouraging a<br />
-								skilled and cohesive workforce capable of fulfilling diverse responsibilities.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Spearheaded a load-out team of associates at DBV7, driving a significant increase
-								in on-time deliveries<br /> and ensuring satisfaction as packages reached the right destination
-								in real-time.
-							</p>
-							<p class="expdescription mb-4 text-base font-normal text-white">
-								•Piloted a brand-new delivery station, DVB7, exhibiting exceptional leadership
-								skills<br /> in training a new LO Process Assistant to effectively manage shifts.
-							</p>
-						</TimelineItem>
-						<TimelineItem>
-							<svelte:fragment slot="icon">
-								<span
-									class="flex absolute -start-3 justify-center items-center w-6 h-6 bg-primary-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-primary-900"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										height="32"
-										width="32"
-										viewBox="0 0 512 512"
-										><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path
-											fill="#f87e0d"
-											d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"
-										/></svg
-									>
-								</span></svelte:fragment
-							>
-							<p class="mb-4 text-base font-normal text-gray-600">.</p>
-						</TimelineItem>
-					</Timeline>
-					<Certifications class="certsmarg" />
-					<h1 class="text-gray-600" style="padding-top: 75px;">TESTSTEST</h1>
-				</div>
-			</h1>
-		</div>
-	</div>
-</div>
+<main class="page" class:visible>
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 pt-32 pb-16">
+
+        <div class="top-row">
+            <div>
+                <div class="page-label">03 / Resume</div>
+                <h1 class="page-heading">Cloud<br />Resume.</h1>
+            </div>
+            <div class="visitor-badge">
+                <span class="visitor-label">Visitors</span>
+                <span class="visitor-count"><Visitorcounter /></span>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <div class="section-line"></div>
+                <span class="section-title">Experience</span>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-meta">Fontainebleau Development · Oct 2023 – Current</div>
+                        <h3 class="timeline-role">IT Support Specialist</h3>
+                        <ul class="timeline-list">
+                            <li>Supports and maintains in-house audio-visual equipment, desktops and notebooks (both Windows and MacOS), specialty systems, and peripherals.</li>
+                            <li>Performs diagnostics and repairs to ensure all hardware and equipment are performing optimally.</li>
+                            <li>Provides support to end users in troubleshooting problems in a fast-paced and constantly evolving environment.</li>
+                            <li>Supports basic helpdesk needs for multiple sites remotely and on-premises.</li>
+                            <li>Provides server administration as well as Office 365 administration.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-meta">Ballyhoo Media · Feb 2023 – Oct 2023</div>
+                        <h3 class="timeline-role">Junior Network Engineer</h3>
+                        <ul class="timeline-list">
+                            <li>Lead the creation, setup and configuration of digital signage networks to maximize overall effectiveness.</li>
+                            <li>Orchestrate the configuration and facilitation of Cradlepoints routers, ensuring reliable and secure network connections.</li>
+                            <li>Responsible for the setup and management of Brightsign digital signage players, optimizing content playback and user experience.</li>
+                            <li>Responsible for wrapping all creatives in a JavaScript Program that allows for automated play count tracking across all assets into an AWS DynamoDB database.</li>
+                            <li>Led the setup of remote troubleshooting network based off RaspberryPi computers on all assets, leading to reduced field time, better customer experience and lower ticket counts.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-meta">Amazon · Nov 2020 – Feb 2023</div>
+                        <h3 class="timeline-role">Operations Supervisor</h3>
+                        <ul class="timeline-list">
+                            <li>Applied the cutting-edge Dynamic Stow system and led the successful introduction of the new DA assist program at DVB7, resulting in improved efficiency.</li>
+                            <li>Headed the training and mentoring of newly recruited personnel, encouraging a skilled and cohesive workforce capable of fulfilling diverse responsibilities.</li>
+                            <li>Spearheaded a load-out team of associates at DBV7, driving a significant increase in on-time deliveries and ensuring satisfaction as packages reached the right destination in real-time.</li>
+                            <li>Piloted a brand-new delivery station, DVB7, exhibiting exceptional leadership skills in training a new LO Process Assistant to effectively manage shifts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certs & Skills -->
+        <div class="two-col-grid">
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-line"></div>
+                    <span class="section-title">Certifications</span>
+                    <div class="section-line"></div>
+                </div>
+                <div class="badge-grid">
+                    <span class="badge">Comptia Cloud+</span>
+                    <span class="badge">AWS Certified Cloud Practitioner</span>
+                    <span class="badge">Microsoft AZ900</span>
+                    <span class="badge">LPI Linux Essentials</span>
+                    <span class="badge">Comptia Security+</span>
+                    <span class="badge">Comptia Network+</span>
+                    <span class="badge">Comptia A+</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-line"></div>
+                    <span class="section-title">Skills</span>
+                    <div class="section-line"></div>
+                </div>
+                <div class="badge-grid">
+                    <span class="badge">HTML & CSS</span>
+                    <span class="badge">Python</span>
+                    <span class="badge">CI/CD</span>
+                    <span class="badge">Terraform</span>
+                    <span class="badge">Software Troubleshooting</span>
+                    <span class="badge">Network Admin</span>
+                    <span class="badge">Tech Support</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-line"></div>
+                <span class="section-title">Education</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="edu-row">
+                <div>
+                    <div class="edu-degree">BS in Information Technology</div>
+                    <div class="edu-school">Western Governors University</div>
+                </div>
+                <div class="edu-date">Dec 2024</div>
+            </div>
+        </div>
+
+        <!-- Socials -->
+        <div class="section">
+            <div class="section-header">
+                <div class="section-line"></div>
+                <span class="section-title">Socials</span>
+                <div class="section-line"></div>
+            </div>
+            <div class="socials-row">
+                <a href="https://www.linkedin.com/in/stephano-s-6a022ba6/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="https://github.com/stephanosant97" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+        </div>
+
+    </div>
+</main>
 
 <style>
-    .headingdiv {
-        max-width: 100%;
-        overflow: auto;
+    .page {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
-    .heading {
-        padding-left: 15px;
-        padding-top: 50px;
+    .page.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .top-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .page-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #f97316;
+        margin-bottom: 1rem;
+    }
+
+    .page-heading {
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
         color: white;
     }
 
-    .headingdiv::-webkit-scrollbar {
-        width: 13px;
+    .visitor-badge {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.25rem;
+        padding-top: 0.5rem;
     }
 
-    .headingdiv::-webkit-scrollbar-track {
-        background: #f87e0d;
+    .visitor-label {
+        font-size: 0.65rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
     }
 
-    .headingdiv::-webkit-scrollbar-thumb {
-        background-color: black;
-        border-radius: 2px;
+    .visitor-count {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: #f97316;
+        line-height: 1;
     }
 
-    .headingdiv::-webkit-scrollbar-thumb:hover {
-        background-color: #333;
+    .section {
+        margin-top: 1rem;
     }
 
-    @media only screen and (max-width: 767px) {
-        /* Styles for mobile devices */
-        .headingdiv {
-            width: 100%; /* Make it take up full width on mobile */
-            max-width: 100%;
-            height: 100%; /* Adjust height as needed */
-            padding: 1px; /* Add padding as needed */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+    .section-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    .section-line {
+        flex: 1;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .section-title {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        white-space: nowrap;
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .timeline-item {
+        display: grid;
+        grid-template-columns: 1rem 1fr;
+        gap: 1.5rem;
+        padding-bottom: 3rem;
+        position: relative;
+    }
+
+    .timeline-item:not(:last-child) .timeline-dot::after {
+        content: '';
+        position: absolute;
+        top: 0.5rem;
+        left: 0.4rem;
+        width: 1px;
+        height: calc(100% - 0.5rem);
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .timeline-dot {
+        width: 0.85rem;
+        height: 0.85rem;
+        border-radius: 9999px;
+        background: #f97316;
+        border: 2px solid rgba(249, 115, 22, 0.3);
+        box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+        position: relative;
+    }
+
+    .timeline-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+    }
+
+    .timeline-meta {
+        font-size: 0.7rem;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.25);
+        text-transform: uppercase;
+    }
+
+    .timeline-role {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: white;
+    }
+
+    .timeline-desc {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.75;
+        font-weight: 300;
+        max-width: 600px;
+    }
+
+    .timeline-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding-left: 0;
+        list-style: none;
+        max-width: 650px;
+    }
+
+    .timeline-list li {
+        font-size: 0.875rem;
+        color: rgba(255, 255, 255, 0.45);
+        line-height: 1.75;
+        font-weight: 300;
+        padding-left: 1rem;
+        position: relative;
+    }
+
+    .timeline-list li::before {
+        content: '·';
+        position: absolute;
+        left: 0;
+        color: #f97316;
+        font-weight: 700;
+    }
+
+    .two-col-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .two-col-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
         }
+    }
 
-        .heading {
-            margin-right: 10px;
-        }
+    .badge-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
 
-		.expheader{
-			margin-top: 20px;
-		}
+    .badge {
+        font-size: 0.72rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        color: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(249, 115, 22, 0.25);
+        background: rgba(249, 115, 22, 0.06);
+        border-radius: 9999px;
+        padding: 0.3rem 0.85rem;
+        transition: border-color 0.2s, color 0.2s;
+    }
+
+    .badge:hover {
+        border-color: rgba(249, 115, 22, 0.6);
+        color: #f97316;
+    }
+
+    .edu-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .edu-degree {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        color: white;
+    }
+
+    .edu-school {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.35);
+        margin-top: 0.2rem;
+        font-weight: 300;
+    }
+
+    .edu-date {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: #f97316;
+        text-transform: uppercase;
+        padding-top: 0.2rem;
+    }
+
+    .socials-row {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .social-link {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.4);
+        transition: color 0.2s, transform 0.2s;
+    }
+
+    .social-link:hover {
+        color: #f97316;
+        transform: translateY(-2px);
     }
 </style>

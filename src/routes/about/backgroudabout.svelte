@@ -1,125 +1,176 @@
 <script>
-	import { Video } from 'flowbite-svelte';
-	import { onMount } from 'svelte';
-
-	let video;
-
-	onMount(() => {
-		video = document.querySelector('.video-element');
-		video.addEventListener('canplaythrough', () => {
-			video.muted = true;
-			video.play();
-		});
-	});
+    import { onMount } from 'svelte';
+    let visible = false;
+    onMount(() => setTimeout(() => (visible = true), 100));
 </script>
 
-<div class="relative overflow-hidden w-screen h-screen">
-	<Video
-		src="/animation.mp4"
-		autoplay
-		playsinline
-		muted
-		loop
-		class="video-element object-cover w-full h-full"
-		trackSrc="animation.mp4"
-	/>
-	<div class= "flex justify-end">
-	<div class="headingdiv absolute top-14 bottom-0 right-0 z-15 border border-white border-2 p-5 bg-gray-600 transform flex-border">
-		<h1 class="heading text-xl font-bold italic">
-			About
-			<hr class="abouthr" />
-		</h1>
-		<h2 class="aboutpara">
-			I'm an IT Support Specialist based out of Miami, FL. <br />
-			I've bounced around the food and beverage, hospitality <br />
-			and warehouse industries before finally realizing my passion <br />
-			was in technology. This was a few years after tinkering <br />
-			with and building my own computer and Proxmox server. <br />
-			<br />
-			Whoops. <br /> <br />
-			I currently work in a hybrid onsite/Azure environment. <br />
-			Primary duties are currently Active Directory and Office 365 administration, <br />
-			as well as user support. During my free time I practice and <br />
-			work on my code. I'm currently aiming for a role in the cloud/devops as I have<br /> personal experience
-			working with AWS. Please feel free to check out my projects section.
-		</h2>
-		<h1 class="aboutpara2 font-bold">
-			Find me here:<br />
-			<a href="https://github.com/stephanosant97" target="_blank" rel="noopener noreferrer">
-				<i class="githubicon fab fa-github fa-2xl"></i>
-			</a>
-			<a
-				href="https://www.linkedin.com/in/stephano-s-6a022ba6/"
-				target="_blank"
-				rel="noopener noreferrer"
-			>
-				<i class="linkedinicon fab fa-linkedin-in fa-2xl"></i>
-			</a>
-		</h1>
-		<h1 class="text-gray-600" style="padding-top: 75px;">testestset</h1>
-	</div>
-</div>
-</div>
+<main class="page" class:visible>
+    <div class="max-w-7xl mx-auto px-6 sm:px-12 lg:px-24 pt-32 pb-16">
+
+        <div class="page-label">01 / About</div>
+
+        <div class="about-grid">
+            <!-- Left: heading -->
+            <div class="left-col">
+                <h1 class="page-heading">About<br />Me.</h1>
+                <div class="accent-line"></div>
+                <img src="/me.png" alt="Stephano" class="avatar" />
+            </div>
+
+            <!-- Right: content -->
+            <div class="right-col">
+                <div class="bio">
+                    <p>
+                        I'm an IT Support Specialist based out of Miami, FL.
+                        I've bounced around the food and beverage, hospitality,
+                        and warehouse industries before finally realizing my passion
+                        was in technology — a few years after tinkering with and
+                        building my own computer and Proxmox server.
+                    </p>
+                    <p class="aside">Whoops.</p>
+                    <p>
+                        I currently work in a hybrid onsite/Azure environment.
+                        Primary duties include Active Directory and Office 365
+                        administration, as well as user support. During my free time
+                        I practice and work on my code. I'm currently aiming for a
+                        role in cloud/DevOps, with personal experience working with AWS.
+                        Feel free to check out my projects section.
+                    </p>
+                </div>
+
+                <div class="social-section">
+                    <span class="social-label">Find me here</span>
+                    <div class="socials">
+                        <a href="https://github.com/stephanosant97" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/stephano-s-6a022ba6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 <style>
-    .headingdiv {
-        position: fixed;
-        top: 50%; /* Center vertically */
-        left: 50%; /* Center horizontally */
-        transform: translate(-50%, -50%); /* Move back by half of its width and height */
-        width: 90%; /* Adjust the width as needed */
-        max-width: 90%; /* Adjust the maximum width as needed */
-        height: 82vh; /* Default height for desktop */
-        overflow: auto; /* Enable overflow scrolling if needed */
+    .page {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
-    .heading {
-        padding-left: 40px;
-        padding-top: 50px;
-        color: white;
+    .page.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
-    .abouthr {
-        margin-left: 0px;
-        margin-right: 0px;
+    .page-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #f97316;
+        margin-bottom: 2.5rem;
     }
 
-    @media only screen and (max-width: 767px) {
-        /* Styles for mobile devices */
-		.headingdiv {
-            width: 100%; /* Make it take up full width on mobile */
-            max-width: 100%;
-            height: 100%; /* Adjust height as needed */
-            padding: 8px; /* Add padding as needed */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
 
-        .heading {
-            margin-right: 10px;
+    @media (min-width: 768px) {
+        .about-grid {
+            grid-template-columns: 1fr 2fr;
+            gap: 5rem;
         }
     }
 
-    .aboutpara {
-        padding-left: 40px;
-        padding-top: 35px;
+    .left-col {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .page-heading {
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        font-weight: 800;
+        line-height: 1;
+        letter-spacing: -0.03em;
         color: white;
     }
 
-    .aboutpara2 {
-        padding-left: 40px;
-        padding-top: 30px;
-        color: white;
+    .accent-line {
+        width: 3rem;
+        height: 3px;
+        background: #f97316;
+        border-radius: 9999px;
     }
 
-    .githubicon {
-        padding-top: 25px;
-        padding-left: 10px;
+    .avatar {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 9999px;
+        object-fit: cover;
+        border: 2px solid rgba(249, 115, 22, 0.3);
     }
 
-    .linkedinicon {
-        padding-left: 20px;
+    .right-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .bio {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .bio p {
+        font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.85;
+        font-weight: 300;
+    }
+
+    .aside {
+        color: #f97316 !important;
+        font-style: italic;
+        font-weight: 400 !important;
+    }
+
+    .social-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .social-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .socials {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .socials a {
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 1.4rem;
+        transition: color 0.2s, transform 0.2s;
+    }
+
+    .socials a:hover {
+        color: #f97316;
+        transform: translateY(-2px);
     }
 </style>
