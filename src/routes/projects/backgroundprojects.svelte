@@ -14,23 +14,25 @@
             <a href="/cloudresume" class="project-card">
                 <div class="card-image">
                     <img src="/cloudchallenge.png" alt="Cloud Resume Challenge" />
+                    <span class="card-number">001</span>
                 </div>
                 <div class="card-body">
-                    <div class="card-number">001</div>
                     <h2 class="card-title">Cloud Resume Challenge</h2>
                     <p class="card-desc">
                         A static website hosted on the cloud to display a resume,
                         complete with a serverless visitor counter backed by AWS Lambda,
                         DynamoDB, and API Gateway.
                     </p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                    </div>
-                    <div class="card-cta">
-                        View Project <span class="arrow">→</span>
+                    <div class="card-footer">
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                        </div>
+                        <div class="card-cta">
+                            View <span class="arrow">→</span>
+                        </div>
                     </div>
                 </div>
             </a>
@@ -51,8 +53,9 @@
     }
 
     .page-label {
-        font-size: 0.7rem;
-        font-weight: 600;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.65rem;
+        font-weight: 400;
         letter-spacing: 0.25em;
         text-transform: uppercase;
         color: #f97316;
@@ -60,10 +63,10 @@
     }
 
     .page-heading {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(3rem, 6vw, 5.5rem);
-        font-weight: 800;
-        line-height: 1;
+        font-family: 'Fraunces', serif;
+        font-size: clamp(3rem, 6vw, 6rem);
+        font-weight: 900;
+        line-height: 0.95;
         letter-spacing: -0.03em;
         color: white;
         margin-bottom: 3.5rem;
@@ -84,96 +87,123 @@
     .project-card {
         display: flex;
         flex-direction: column;
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        border-radius: 1rem;
-        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 0.875rem;
+        background: rgba(255, 255, 255, 0.02);
         overflow: hidden;
-        transition: border-color 0.3s, background 0.3s, transform 0.3s;
+        text-decoration: none;
+        transition: border-color 0.35s, background 0.35s, transform 0.35s, box-shadow 0.35s;
         cursor: pointer;
     }
 
     .project-card:hover {
-        border-color: rgba(249, 115, 22, 0.3);
-        background: rgba(249, 115, 22, 0.04);
-        transform: translateY(-4px);
+        border-color: rgba(249, 115, 22, 0.25);
+        background: rgba(249, 115, 22, 0.03);
+        transform: translateY(-5px);
+        box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(249, 115, 22, 0.08);
     }
 
     .card-image {
         width: 100%;
         aspect-ratio: 16 / 9;
         overflow: hidden;
-        background: rgba(255,255,255,0.03);
+        background: rgba(255,255,255,0.02);
+        position: relative;
     }
 
     .card-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.8;
-        transition: opacity 0.3s, transform 0.3s;
+        opacity: 0.72;
+        transition: opacity 0.35s, transform 0.5s;
     }
 
     .project-card:hover .card-image img {
-        opacity: 1;
-        transform: scale(1.03);
+        opacity: 0.9;
+        transform: scale(1.04);
+    }
+
+    /* Number badge overlaid on image */
+    .card-number {
+        position: absolute;
+        top: 0.875rem;
+        right: 0.875rem;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: rgba(255, 255, 255, 0.55);
+        background: rgba(3, 7, 18, 0.65);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        padding: 0.28rem 0.6rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .card-body {
         padding: 1.75rem;
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.875rem;
         flex: 1;
     }
 
-    .card-number {
-        font-size: 0.65rem;
-        font-weight: 700;
-        letter-spacing: 0.2em;
-        color: #f97316;
-    }
-
     .card-title {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.3rem;
-        font-weight: 700;
+        font-family: 'Fraunces', serif;
+        font-size: 1.4rem;
+        font-weight: 800;
         color: white;
-        line-height: 1.2;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
     }
 
     .card-desc {
+        font-family: 'Outfit', sans-serif;
         font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.45);
+        color: rgba(255, 255, 255, 0.38);
         line-height: 1.75;
         font-weight: 300;
         flex: 1;
     }
 
-    .tags {
+    .card-footer {
         display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 1rem;
         margin-top: 0.25rem;
     }
 
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
     .tag {
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.58rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.4);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 9999px;
-        padding: 0.2rem 0.65rem;
+        padding: 0.2rem 0.6rem;
     }
 
     .card-cta {
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
         color: #f97316;
-        margin-top: 0.5rem;
-        transition: gap 0.2s;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
     }
 
     .arrow {
@@ -182,6 +212,6 @@
     }
 
     .project-card:hover .arrow {
-        transform: translateX(4px);
+        transform: translateX(5px);
     }
 </style>

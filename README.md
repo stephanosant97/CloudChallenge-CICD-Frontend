@@ -51,3 +51,17 @@ Fully redesigned the frontend with a custom "Aurora Dark" theme:
 - Updated CI/CD pipeline (GitHub Actions) to include Node.js install and SvelteKit build step before S3 sync
 
 **Stack update:** SvelteKit + Tailwind CSS + Flowbite Svelte
+
+---
+
+## Update — March 2026
+
+Further design and content updates:
+
+- **Typography overhaul** — replaced Poppins/Open Sans with a distinctive three-font system: Fraunces (serif display), Space Mono (monospace labels/nav), Outfit (body text)
+- **Constellation background** — replaced static grid overlay with a live canvas animation: 85 drifting nodes with dynamic connecting lines and pulsing orange "hot" nodes, layered above the aurora blobs
+- **Custom cursor** — replaced OS cursor with a glowing orange dot + lagging ring that expands on hover over interactive elements
+- **Scroll-aware navbar** — nav gains glassmorphism (backdrop-blur) after scrolling 40px
+- **Content updated for Cyber Analyst focus** — about page and resume rewritten to reflect security operations experience (SentinelOne EDR, Microsoft Defender, ProofPoint, KnowBe4, PowerShell automation)
+- **Skills updated** — removed Terraform, added PowerShell, Active Directory, Microsoft Defender, SentinelOne EDR, Azure, Linux
+- **Fontainebleau responsibilities** updated with current security-focused duties

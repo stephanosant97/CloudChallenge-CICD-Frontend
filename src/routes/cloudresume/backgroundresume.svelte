@@ -19,6 +19,7 @@
             </div>
         </div>
 
+        <!-- Experience -->
         <div class="section">
             <div class="section-header">
                 <div class="section-line"></div>
@@ -33,11 +34,13 @@
                         <div class="timeline-meta">Fontainebleau Development · Oct 2023 – Current</div>
                         <h3 class="timeline-role">IT Support Specialist</h3>
                         <ul class="timeline-list">
-                            <li>Supports and maintains in-house audio-visual equipment, desktops and notebooks (both Windows and MacOS), specialty systems, and peripherals.</li>
-                            <li>Performs diagnostics and repairs to ensure all hardware and equipment are performing optimally.</li>
-                            <li>Provides support to end users in troubleshooting problems in a fast-paced and constantly evolving environment.</li>
-                            <li>Supports basic helpdesk needs for multiple sites remotely and on-premises.</li>
-                            <li>Provides server administration as well as Office 365 administration.</li>
+                            <li>Manage and monitor SentinelOne EDR for 286 endpoints. Proactively respond to security alerts, addressing issues ranging from suspicious downloads to malicious executables, ensuring timely threat mitigation.</li>
+                            <li>Actively manage and respond to Microsoft Cloud Defender alerts for 300+ users. Actions include blocking spam/phishing emails, recovering compromised accounts, and investigating alerts related to email sending limits, impossible travel, and suspicious inbox rules.</li>
+                            <li>Wrote PowerShell script that automatically enables MFA for new user accounts created in Active Directory, excluding service accounts — set to run weekly autonomously.</li>
+                            <li>Active Directory administration including account creation, termination, password resets, attribute editing, group management, and more.</li>
+                            <li>Spearhead KnowBe4 cybersecurity training initiatives for 250+ users, enhancing online safety awareness and practices.</li>
+                            <li>Monitor ProofPoint email filter for suspicious inbound and outbound emails across 300+ users.</li>
+                            <li>Support helpdesk needs for multiple sites remotely and on-premises for 300+ users.</li>
                         </ul>
                     </div>
                 </div>
@@ -99,13 +102,16 @@
                     <div class="section-line"></div>
                 </div>
                 <div class="badge-grid">
-                    <span class="badge">HTML & CSS</span>
+                    <span class="badge">PowerShell</span>
+                    <span class="badge">Active Directory</span>
+                    <span class="badge">Microsoft Defender</span>
+                    <span class="badge">SentinelOne EDR</span>
+                    <span class="badge">Azure</span>
+                    <span class="badge">Linux</span>
                     <span class="badge">Python</span>
                     <span class="badge">CI/CD</span>
-                    <span class="badge">Terraform</span>
-                    <span class="badge">Software Troubleshooting</span>
                     <span class="badge">Network Admin</span>
-                    <span class="badge">Tech Support</span>
+                    <span class="badge">HTML & CSS</span>
                 </div>
             </div>
         </div>
@@ -122,7 +128,7 @@
                     <div class="edu-degree">BS in Information Technology</div>
                     <div class="edu-school">Western Governors University</div>
                 </div>
-                <div class="edu-date">Dec 2024</div>
+                <div class="edu-date">Dec 2026</div>
             </div>
         </div>
 
@@ -168,8 +174,9 @@
     }
 
     .page-label {
-        font-size: 0.7rem;
-        font-weight: 600;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.65rem;
+        font-weight: 400;
         letter-spacing: 0.25em;
         text-transform: uppercase;
         color: #f97316;
@@ -177,10 +184,10 @@
     }
 
     .page-heading {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(3rem, 6vw, 5.5rem);
-        font-weight: 800;
-        line-height: 1;
+        font-family: 'Fraunces', serif;
+        font-size: clamp(3rem, 6vw, 6rem);
+        font-weight: 900;
+        line-height: 0.95;
         letter-spacing: -0.03em;
         color: white;
     }
@@ -194,19 +201,21 @@
     }
 
     .visitor-label {
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.2em;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.6rem;
+        font-weight: 400;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.22);
     }
 
     .visitor-count {
-        font-family: 'Poppins', sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
+        font-family: 'Fraunces', serif;
+        font-size: 2.25rem;
+        font-weight: 800;
         color: #f97316;
         line-height: 1;
+        letter-spacing: -0.02em;
     }
 
     .section {
@@ -217,21 +226,22 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2.5rem;
     }
 
     .section-line {
         flex: 1;
         height: 1px;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.06);
     }
 
     .section-title {
-        font-size: 0.7rem;
-        font-weight: 600;
-        letter-spacing: 0.25em;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.6rem;
+        font-weight: 400;
+        letter-spacing: 0.28em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.22);
         white-space: nowrap;
     }
 
@@ -256,7 +266,7 @@
         left: 0.4rem;
         width: 1px;
         height: calc(100% - 0.5rem);
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.06);
     }
 
     .timeline-dot {
@@ -264,8 +274,8 @@
         height: 0.85rem;
         border-radius: 9999px;
         background: #f97316;
-        border: 2px solid rgba(249, 115, 22, 0.3);
-        box-shadow: 0 0 10px rgba(249, 115, 22, 0.4);
+        border: 2px solid rgba(249, 115, 22, 0.25);
+        box-shadow: 0 0 12px rgba(249, 115, 22, 0.45);
         flex-shrink: 0;
         margin-top: 0.1rem;
         position: relative;
@@ -278,26 +288,21 @@
     }
 
     .timeline-meta {
-        font-size: 0.7rem;
-        font-weight: 500;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.62rem;
+        font-weight: 400;
         letter-spacing: 0.1em;
-        color: rgba(255, 255, 255, 0.25);
+        color: rgba(255, 255, 255, 0.22);
         text-transform: uppercase;
     }
 
     .timeline-role {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1.1rem;
+        font-family: 'Fraunces', serif;
+        font-size: 1.15rem;
         font-weight: 700;
         color: white;
-    }
-
-    .timeline-desc {
-        font-size: 0.9rem;
-        color: rgba(255, 255, 255, 0.45);
-        line-height: 1.75;
-        font-weight: 300;
-        max-width: 600px;
+        letter-spacing: -0.01em;
+        margin-top: 0.1rem;
     }
 
     .timeline-list {
@@ -307,11 +312,13 @@
         padding-left: 0;
         list-style: none;
         max-width: 650px;
+        margin-top: 0.4rem;
     }
 
     .timeline-list li {
+        font-family: 'Outfit', sans-serif;
         font-size: 0.875rem;
-        color: rgba(255, 255, 255, 0.45);
+        color: rgba(255, 255, 255, 0.42);
         line-height: 1.75;
         font-weight: 300;
         padding-left: 1rem;
@@ -347,19 +354,21 @@
     }
 
     .badge {
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.05em;
-        color: rgba(255, 255, 255, 0.6);
-        border: 1px solid rgba(249, 115, 22, 0.25);
-        background: rgba(249, 115, 22, 0.06);
+        font-family: 'Space Mono', monospace;
+        font-size: 0.62rem;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: rgba(255, 255, 255, 0.48);
+        border: 1px solid rgba(249, 115, 22, 0.2);
+        background: rgba(249, 115, 22, 0.05);
         border-radius: 9999px;
         padding: 0.3rem 0.85rem;
-        transition: border-color 0.2s, color 0.2s;
+        transition: border-color 0.2s, color 0.2s, background 0.2s;
     }
 
     .badge:hover {
-        border-color: rgba(249, 115, 22, 0.6);
+        border-color: rgba(249, 115, 22, 0.55);
+        background: rgba(249, 115, 22, 0.1);
         color: #f97316;
     }
 
@@ -372,22 +381,25 @@
     }
 
     .edu-degree {
-        font-family: 'Poppins', sans-serif;
-        font-size: 1rem;
+        font-family: 'Fraunces', serif;
+        font-size: 1.05rem;
         font-weight: 700;
         color: white;
+        letter-spacing: -0.01em;
     }
 
     .edu-school {
+        font-family: 'Outfit', sans-serif;
         font-size: 0.85rem;
-        color: rgba(255, 255, 255, 0.35);
+        color: rgba(255, 255, 255, 0.3);
         margin-top: 0.2rem;
         font-weight: 300;
     }
 
     .edu-date {
-        font-size: 0.7rem;
-        font-weight: 600;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.65rem;
+        font-weight: 400;
         letter-spacing: 0.1em;
         color: #f97316;
         text-transform: uppercase;
@@ -404,9 +416,12 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
-        font-size: 0.85rem;
-        font-weight: 500;
-        color: rgba(255, 255, 255, 0.4);
+        font-family: 'Space Mono', monospace;
+        font-size: 0.72rem;
+        font-weight: 400;
+        letter-spacing: 0.06em;
+        color: rgba(255, 255, 255, 0.32);
+        text-decoration: none;
         transition: color 0.2s, transform 0.2s;
     }
 

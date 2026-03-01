@@ -10,7 +10,7 @@
         <div class="page-label">01 / About</div>
 
         <div class="about-grid">
-            <!-- Left: heading -->
+            <!-- Left: heading + accent + avatar -->
             <div class="left-col">
                 <h1 class="page-heading">About<br />Me.</h1>
                 <div class="accent-line"></div>
@@ -22,20 +22,22 @@
                 <div class="bio">
                     <p>
                         I'm an IT Support Specialist based out of Miami, FL.
-                        I've bounced around the food and beverage, hospitality,
-                        and warehouse industries before finally realizing my passion
-                        was in technology — a few years after tinkering with and
-                        building my own computer and Proxmox server.
+                        Before landing here, I bounced around food & beverage, hospitality,
+                        and warehouses — eventually realizing my real passion was technology.
+                        That realization came a few years <em class="inline-punch">after</em> I'd already built
+                        my own PC and a Proxmox home server from scratch.
                     </p>
                     <p class="aside">Whoops.</p>
                     <p>
-                        I currently work in a hybrid onsite/Azure environment.
-                        Primary duties include Active Directory and Office 365
-                        administration, as well as user support. During my free time
-                        I practice and work on my code. I'm currently aiming for a
-                        role in cloud/DevOps, with personal experience working with AWS.
-                        Feel free to check out my projects section.
+                        These days I work in a hybrid onsite/Azure environment handling
+                        Active Directory, Office 365, and end-user support. But my free time
+                        belongs to something different — I'm actively working toward a
+                        <em class="inline-punch">Cyber Analyst role</em>, sharpening my skills in
+                        threat detection, security operations, and anything that keeps
+                        the bad guys out. The certs, the labs, the late nights — all pointing
+                        in that direction.
                     </p>
+                    <p class="sign-off">Feel free to poke around the projects section.</p>
                 </div>
 
                 <div class="social-section">
@@ -67,8 +69,9 @@
     }
 
     .page-label {
-        font-size: 0.7rem;
-        font-weight: 600;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.65rem;
+        font-weight: 400;
         letter-spacing: 0.25em;
         text-transform: uppercase;
         color: #f97316;
@@ -84,7 +87,7 @@
     @media (min-width: 768px) {
         .about-grid {
             grid-template-columns: 1fr 2fr;
-            gap: 5rem;
+            gap: 6rem;
         }
     }
 
@@ -95,17 +98,17 @@
     }
 
     .page-heading {
-        font-family: 'Poppins', sans-serif;
-        font-size: clamp(3rem, 6vw, 5.5rem);
-        font-weight: 800;
-        line-height: 1;
+        font-family: 'Fraunces', serif;
+        font-size: clamp(3rem, 6vw, 6rem);
+        font-weight: 900;
+        line-height: 0.95;
         letter-spacing: -0.03em;
         color: white;
     }
 
     .accent-line {
-        width: 3rem;
-        height: 3px;
+        width: 2.5rem;
+        height: 2px;
         background: #f97316;
         border-radius: 9999px;
     }
@@ -115,7 +118,8 @@
         height: 5rem;
         border-radius: 9999px;
         object-fit: cover;
-        border: 2px solid rgba(249, 115, 22, 0.3);
+        border: 1px solid rgba(249, 115, 22, 0.25);
+        opacity: 0.88;
     }
 
     .right-col {
@@ -132,16 +136,35 @@
     }
 
     .bio p {
+        font-family: 'Outfit', sans-serif;
         font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-        color: rgba(255, 255, 255, 0.55);
+        color: rgba(255, 255, 255, 0.48);
         line-height: 1.85;
         font-weight: 300;
     }
 
+    .inline-punch {
+        font-family: 'Fraunces', serif;
+        font-style: italic;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .sign-off {
+        font-family: 'Space Mono', monospace !important;
+        font-size: 0.72rem !important;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.22) !important;
+        text-transform: uppercase;
+    }
+
     .aside {
+        font-family: 'Fraunces', serif !important;
         color: #f97316 !important;
         font-style: italic;
         font-weight: 400 !important;
+        font-size: 1.3rem !important;
+        letter-spacing: -0.01em;
     }
 
     .social-section {
@@ -151,11 +174,12 @@
     }
 
     .social-label {
-        font-size: 0.7rem;
-        font-weight: 600;
-        letter-spacing: 0.2em;
+        font-family: 'Space Mono', monospace;
+        font-size: 0.6rem;
+        font-weight: 400;
+        letter-spacing: 0.22em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.22);
     }
 
     .socials {
@@ -164,9 +188,10 @@
     }
 
     .socials a {
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.28);
         font-size: 1.4rem;
         transition: color 0.2s, transform 0.2s;
+        text-decoration: none;
     }
 
     .socials a:hover {
