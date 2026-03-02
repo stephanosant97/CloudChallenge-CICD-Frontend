@@ -33,5 +33,10 @@
 		"vite": "^5.0.3",
 		"vitest": "^1.2.0"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"chart.js": "^4.5.1",
+		"d3-geo": "^3.1.1",
+		"topojson-client": "^3.1.0"
+	}
 }

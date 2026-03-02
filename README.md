@@ -65,3 +65,19 @@ Further design and content updates:
 - **Content updated for Cyber Analyst focus** — about page and resume rewritten to reflect security operations experience (SentinelOne EDR, Microsoft Defender, ProofPoint, KnowBe4, PowerShell automation)
 - **Skills updated** — removed Terraform, added PowerShell, Active Directory, Microsoft Defender, SentinelOne EDR, Azure, Linux
 - **Fontainebleau responsibilities** updated with current security-focused duties
+
+---
+
+## AWS Honeypot Project — March 2026
+
+Added a live honeypot project showcase and real-time attack dashboard:
+
+- **`/honeypot`** — Project overview page covering architecture (EC2 → Cowrie → Lambda → DynamoDB → API Gateway), capture categories (SSH brute-force, port scans, shell commands, malware downloads), and tech stack
+- **`/honeypot/dashboard`** — Live attack dashboard powered by real Cowrie honeypot data on AWS EC2:
+  - **D3 world map** — canvas-rendered base map (geoNaturalEarth1 projection) with an SVG overlay showing attack origin dots sized by hit count, a pulsing green honeypot target (Ohio / us-east-2), and CSS ping-ring animations on new attacks
+  - **Stat overlay** — Total Attacks, Unique IPs, Countries, and Top Password displayed as a HUD strip above the map
+  - **Live attack feed** — scrollable event log showing timestamp, source IP, country, event type, credentials tried, and shell commands executed
+  - **Top tables** — Top attacking IPs, most-tried passwords, most-tried usernames, and top source countries
+  - Auto-refreshes every 30 seconds via AWS API Gateway + Lambda + DynamoDB backend
+
+**Stack:** AWS EC2, Cowrie, AWS Lambda, API Gateway, DynamoDB, Python, SvelteKit, d3-geo, topojson-client

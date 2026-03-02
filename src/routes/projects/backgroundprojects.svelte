@@ -36,6 +36,38 @@
                     </div>
                 </div>
             </a>
+
+            <a href="/honeypot" class="project-card">
+                <div class="card-image terminal-card">
+                    <span class="card-number">002</span>
+                    <div class="terminal-lines" aria-hidden="true">
+                        <span class="t-line"><span class="t-dim">192.168.0.1</span> <span class="t-warn">SSH</span> <span class="t-dim">brute-force attempt</span></span>
+                        <span class="t-line"><span class="t-dim">45.33.32.156</span> <span class="t-alert">PORT SCAN</span> <span class="t-dim">22,80,443</span></span>
+                        <span class="t-line"><span class="t-dim">103.21.244.0</span> <span class="t-warn">SSH</span> <span class="t-dim">login: root / ****</span></span>
+                        <span class="t-line"><span class="t-dim">198.51.100.14</span> <span class="t-alert">TELNET</span> <span class="t-dim">connection attempt</span></span>
+                        <span class="t-line"><span class="t-ok">TRAP ACTIVE</span> <span class="t-dim">— all traffic logged →</span></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h2 class="card-title">AWS Honeypot</h2>
+                    <p class="card-desc">
+                        A cloud-hosted honeypot on EC2 using Cowrie to capture real-world
+                        attack data — SSH brute-force, port scans, and credential stuffing —
+                        surfaced via a live dashboard backed by Lambda and DynamoDB.
+                    </p>
+                    <div class="card-footer">
+                        <div class="tags">
+                            <span class="tag">AWS EC2</span>
+                            <span class="tag">Cowrie</span>
+                            <span class="tag">Lambda</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <div class="card-cta">
+                            View <span class="arrow">→</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
     </div>
 </main>
@@ -214,4 +246,35 @@
     .project-card:hover .arrow {
         transform: translateX(5px);
     }
+
+    /* Honeypot terminal card image */
+    .terminal-card {
+        background: #050a14;
+        display: flex;
+        align-items: flex-end;
+        padding: 1.25rem 1.5rem;
+        border-bottom: 1px solid rgba(249, 115, 22, 0.08);
+    }
+
+    .terminal-lines {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        width: 100%;
+    }
+
+    .t-line {
+        font-family: 'Space Mono', monospace;
+        font-size: 0.62rem;
+        letter-spacing: 0.04em;
+        display: flex;
+        gap: 0.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .t-dim  { color: rgba(255,255,255,0.25); }
+    .t-warn { color: #f97316; font-weight: 700; }
+    .t-alert { color: #ef4444; font-weight: 700; }
+    .t-ok   { color: #22c55e; font-weight: 700; }
 </style>
