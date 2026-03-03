@@ -4,12 +4,8 @@
 
 
 
-html, body {
-    background-color: #030712;
-    color: white;
-}
-
 html {
+    background-color: #030712;
     scroll-behavior: smooth;
 }
 
